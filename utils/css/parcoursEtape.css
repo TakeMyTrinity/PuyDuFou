@@ -1,0 +1,219 @@
+/* Style pour la bordure des cards */
+.card {
+    border: 2px solid #dee2e6;
+    margin-bottom: 20px;
+}
+
+/* Style pour la bordure verte des cards sélectionnées */
+.border-success {
+    border-color: #28a745 !important;
+}
+
+/* Style pour le bouton Valider */
+#btn-valider {
+    margin-top: 20px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#btn-valider:hover {
+    background-color: #0069d9;
+}
+
+/* Style pour les étapes */
+.etape {
+    display: none;
+}
+
+.etape.active {
+    display: block;
+}
+
+#btn-suivant {
+    margin-top: 20px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#btn-retour {
+    margin-top: 20px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#btn-retour:hover,
+#btn-suivant:hover {
+    background-color: #0069d9;
+}
+
+table {
+    border-collapse: collapse;
+}
+
+td {
+    border: 1px solid black;
+    padding: 5px;
+    width: calc(100% / 7);
+    text-align: center;
+}
+
+#calendar .selected {
+    border: 2px solid red;
+}
+
+#calendar td[data-selected="true"] {
+    border: 2px solid red;
+}
+
+.highlighted {
+    background-color: yellow;
+    color: black;
+}
+
+.disabled {
+    background-color: #ccc;
+    color: #999;
+}
+
+#disabled {
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    margin-right: 5px;
+    background-color: #ccc;
+}
+
+#selected {
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    margin-right: 5px;
+    border: 1px solid red;
+}
+
+/* CALANDAR */
+
+/* Import Google font - Poppins */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
+
+.wrapper {
+    width: 450px;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.12);
+    margin: 0;
+}
+
+.wrapper header {
+    display: flex;
+    align-items: center;
+    padding: 25px 30px 10px;
+    justify-content: space-between;
+}
+
+header .icons {
+    display: flex;
+}
+
+header .icons span {
+    height: 38px;
+    width: 38px;
+    margin: 0 1px;
+    cursor: pointer;
+    color: #878787;
+    text-align: center;
+    line-height: 38px;
+    font-size: 1.9rem;
+    user-select: none;
+    border-radius: 50%;
+}
+
+.icons span:last-child {
+    margin-right: -10px;
+}
+
+header .icons span:hover {
+    background: #f2f2f2;
+}
+
+header .current-date {
+    font-size: 1.45rem;
+    font-weight: 500;
+}
+
+.calendar {
+    padding: 20px;
+}
+
+.calendar ul {
+    display: flex;
+    flex-wrap: wrap;
+    list-style: none;
+    text-align: center;
+}
+
+.calendar .days {
+    margin-bottom: 20px;
+}
+
+.calendar li {
+    color: #333;
+    width: calc(100% / 7);
+    font-size: 1.07rem;
+}
+
+.calendar .weeks li {
+    font-weight: 500;
+    cursor: default;
+}
+
+.calendar .days li {
+    z-index: 1;
+    cursor: pointer;
+    position: relative;
+    margin-top: 30px;
+}
+
+.days li.inactive {
+    color: #aaa;
+}
+
+.days li.active {
+    color: #fff;
+}
+
+.savedDate::before {
+    background: rgb(243, 132, 132);
+}
+
+.days li::before {
+    position: absolute;
+    content: "";
+    left: 50%;
+    top: 50%;
+    height: 40px;
+    width: 40px;
+    z-index: -1;
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.days li.active::before {
+    background: #9B59B6;
+}
+
+.days li.notSavedDate {
+    color: #aaa;
+}
